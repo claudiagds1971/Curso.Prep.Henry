@@ -8,8 +8,18 @@ function crearUsuario() {
   // {{nombre}} debe ser el nombre definido en cada instancia
   // Devuelve la clase
   // Tu código:
-
+  function Usuario(objeto) { 
+    this.usuario = objeto.usuario,
+    this.nombre = objeto.nombre,
+    this.email = objeto.email,
+    this.password = objeto.password
+ }
+  Usuario.prototype.saludar = function(){
+    return "hola mi nombre es" + this.nombre;
+ }
+    return Usuario;
 }
+
 
 function agregarMetodoPrototype(Constructor) {
   // Agrega un método al Constructor del `prototype`
@@ -34,4 +44,4 @@ module.exports = {
   crearUsuario,
   agregarMetodoPrototype,
   agregarStringInvertida
-};
+}
